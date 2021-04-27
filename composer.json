@@ -1,0 +1,21 @@
+{
+    "name": "arturdoruch/array",
+    "description": "A collection of useful array functions.",
+    "authors": [
+        {
+            "name": "Artur Doruch",
+            "email": "arturdoruch@interia.pl"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "suggest": {
+        "arturdoruch/string": "To convert case of an array stringable keys"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArturDoruch\\Array_\\": ""
+        }
+    }
+}
