@@ -1,6 +1,6 @@
 <?php
 
-namespace ArturDoruch\Array_;
+namespace ArturDoruch\ArrayUtil;
 
 use ArturDoruch\String\StringCaseConverter;
 
@@ -31,9 +31,9 @@ class ArrayUtils
     }
 
     /**
-     * Checks whether the multidimensional array has keys path.
+     * Checks whether the multi-dimensional array has keys path.
      *
-     * @param array $array The multidimensional array.
+     * @param array $array The multi-dimensional array.
      * @param array $keys The keys path. Keys must be a string or numeric value.
      *
      * @return bool
@@ -84,7 +84,7 @@ class ArrayUtils
     }
 
     /**
-     * Finds a value in multidimensional array by array keys path.
+     * Finds a value in multi-dimensional array by array keys path.
      *
      * @param array $array
      * @param array $keys The keys path of the nested arrays for which to get the value.
@@ -108,7 +108,7 @@ class ArrayUtils
     }
 
     /**
-     * Checks if the multidimensional arrays are equal, contains the same keys and values.
+     * Checks if the multi-dimensional arrays are equal, contains the same keys and values.
      * NOTE: Order of the array keys and values of indexed array is ignored.
      *
      * @param array $array1
@@ -124,11 +124,7 @@ class ArrayUtils
         self::formatValues($array1, $strict);
         self::formatValues($array2, $strict);
 
-        if ($strict) {
-            return $array1 === $array2;
-        } else {
-            return $array1 == $array2;
-        }
+        return $strict ? $array1 === $array2 : $array1 == $array2;
     }
 
 
@@ -152,7 +148,7 @@ class ArrayUtils
     }
 
     /**
-     * Sorts arrays in multidimensional array by keys.
+     * Sorts arrays in multi-dimensional array by keys.
      *
      * @param array $array
      * @param int $flags
@@ -230,10 +226,10 @@ class ArrayUtils
     }
 
     /**
-     * Converts multidimensional array into an object.
+     * Converts multi-dimensional array into an object.
      * NOTE: Only array keys with type of string and not empty are converted to object property.
      *
-     * @param array $array The multidimensional array.
+     * @param array $array The multi-dimensional array.
      * @param bool $recursive Whether to convert to an object nested arrays.
      * @param string|null $propertyCase Case of an object property name. One of the values: "camel", "snake" or null
      *                                  when array keys should be used as is.
@@ -265,7 +261,7 @@ class ArrayUtils
     }
 
     /**
-     * Flattens multidimensional array.
+     * Flattens multi-dimensional array.
      *
      * @param array $array
      * @param bool $preserveKeys Whether to leave the arrays current keys. If true values with the same key are overridden.
@@ -278,7 +274,7 @@ class ArrayUtils
     }
 
     /**
-     * Recursively merges the values of two multidimensional arrays.
+     * Recursively merges the values of two multi-dimensional arrays.
      *
      * Example:
      *      $baseArray =   ['key' => 'value', 'key2' => 'value 2'];

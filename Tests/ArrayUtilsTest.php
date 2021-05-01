@@ -1,8 +1,8 @@
 <?php
 
-namespace ArturDoruch\Array_\Tests;
+namespace ArturDoruch\ArrayUtil\Tests;
 
-use ArturDoruch\Array_\ArrayUtils;
+use ArturDoruch\ArrayUtil\ArrayUtils;
 use PHPUnit\Framework\TestCase;
 
 /**

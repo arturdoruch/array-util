@@ -1,6 +1,8 @@
 {
-    "name": "arturdoruch/array",
+    "name": "arturdoruch/array-util",
     "description": "A collection of useful array functions.",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Artur Doruch",
@@ -15,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ArturDoruch\\Array_\\": ""
+            "ArturDoruch\\ArrayUtil\\": ""
         }
     }
 }

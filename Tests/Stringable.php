@@ -1,6 +1,6 @@
 <?php
 
-namespace ArturDoruch\Array_\Tests;
+namespace ArturDoruch\ArrayUtil\Tests;
 
 /**
  * @author Artur Doruch <arturdoruch@interia.pl>
