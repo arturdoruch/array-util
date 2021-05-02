@@ -2,7 +2,7 @@
 
 namespace ArturDoruch\ArrayUtil;
 
-use ArturDoruch\String\StringCaseConverter;
+use ArturDoruch\StringUtil\StringCaseConverter;
 
 /**
  * @author Artur Doruch <arturdoruch@interia.pl>
