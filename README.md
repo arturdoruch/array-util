@@ -18,6 +18,7 @@ composer require arturdoruch/array-util
    - find
    - equals
    - keySort
+   - insert
    - concatStrings
    - toObject
    - flatten

@@ -165,6 +165,19 @@ class ArrayUtils
     }
 
     /**
+     * Inserts items into indexed array at specific position.
+     *
+     * @param array $array An indexed array.
+     * @param array $items The items to insert.
+     * @param int $position The index (starting at 0) of the array in which to insert the items.
+     *                      If it is negative then position will be counting from the end of the input array.
+     */
+    public static function insert(array &$array, array $items, int $position)
+    {
+        array_splice($array, $position, 0, $items);
+    }
+
+    /**
      * Concatenates string and numeric values with the same index in all specified arrays into one string.
      *
      * @param array|string $separators The value separators. An array or a string if the same separator should

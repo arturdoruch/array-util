@@ -357,4 +357,28 @@ class ArrayUtilsTest extends TestCase
         self::assertEquals(['a', 'x'], array_keys($array));
         self::assertEquals([1, 'B', 'b', 'c'], array_keys($array['a']));
     }
+
+
+    public function testInsert()
+    {
+        $array = [1, 2, 3, 5];
+        ArrayUtils::insert($array, [4], 3);
+        self::assertEquals([1, 2, 3, 4, 5], $array);
+
+        $array = [1, 2, 3, 5];
+        ArrayUtils::insert($array, [4], 6);
+        self::assertEquals([1, 2, 3, 5, 4], $array);
+
+        $array = [1, 2, 3];
+        ArrayUtils::insert($array, [4], -2);
+        self::assertSame([1, 4, 2, 3], $array);
+
+        $array = [1, 2];
+        ArrayUtils::insert($array, [], 1);
+        self::assertSame([1, 2], $array);
+
+        $array = [];
+        ArrayUtils::insert($array, $insert = [null, false, new \stdClass(), []], 0);
+        self::assertSame($insert, $array);
+    }
 }
